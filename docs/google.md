@@ -43,13 +43,45 @@ pip install webdriver-manager
 Baixe o pacote `.deb` do Google Chrome:
 
 ```bash
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://storage.googleapis.com/chrome-for-testing-public/129.0.6668.58/linux64/chromedriver-linux64.zip
 ```
 
-Instale o pacote `.deb`:
+Descompacte
 
 ```bash
-sudo apt install ./google-chrome-stable_current_amd64.deb
+unzip chromedriver-linux64.zip
+```
+
+Permissão para execução
+
+```bash
+chmod +x chromedriver
+```
+
+Copiar o chromedriver para o path
+
+```bash
+sudo cp chromedriver /usr/bin/
+```
+
+Se o local do seu driver ainda não estiver em um diretório listado, você pode adicionar um novo diretório ao PATH:
+
+```bash
+echo 'export PATH=$PATH:/usr/bin/chromedriver' >> ~/.zshenv
+```
+
+Atualizar o MYOHZSH
+
+```bash
+source ~/.zshenv
+```
+
+Você pode testar se ele foi adicionado corretamente verificando a versão do driver:
+
+```bash
+chromedriver --version
+
+ChromeDriver 129.0.6668.58 (81a06fb873a9b386848719cf9f93e59579fb5d4b-refs/branch-heads/6668@{#1318})
 ```
 
 Verifique a instalação:
@@ -59,7 +91,7 @@ Após a instalação, você pode verificar se o Google Chrome está disponível 
 ```bash
 google-chrome --version
 
-Google Chrome 126.0.6478.126
+Google Chrome 128.0.6613.119 
 ```
 
 ## Verificando as bibliotecas que foram instaladas
