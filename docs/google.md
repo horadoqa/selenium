@@ -38,7 +38,23 @@ pip install selenium
 pip install webdriver-manager 
 ```
 
-## Instalando o Google-Chrome
+## Instalando o google-chrome
+
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+sudo apt install ./google-chrome-stable_current_amd64.deb && \
+google-chrome --version
+```
+
+## Verifique a instalação:
+
+```bash
+google-chrome --version
+
+Google Chrome 129.0.6668.58
+```
+
+## Instalando o chromedriver
 
 Baixe o pacote `.deb` do Google Chrome:
 
@@ -84,15 +100,7 @@ chromedriver --version
 ChromeDriver 129.0.6668.58 (81a06fb873a9b386848719cf9f93e59579fb5d4b-refs/branch-heads/6668@{#1318})
 ```
 
-Verifique a instalação:
-
-Após a instalação, você pode verificar se o Google Chrome está disponível executando:
-
-```bash
-google-chrome --version
-
-Google Chrome 128.0.6613.119 
-```
+OBS.: Tanto o `google-chrome` quanto o `chromedriver` precisam estar na mesma versão !!!
 
 ## Verificando as bibliotecas que foram instaladas
 
